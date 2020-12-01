@@ -14,6 +14,8 @@ import {
   NbCardModule,
   NbSidebarModule,
   NbSearchModule,
+  NbTabsetModule,
+  NbRouteTabsetModule,
 } from '@nebular/theme';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
@@ -37,7 +39,8 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
     NbMenuModule,
     NbCardModule,
     NbSearchModule,
-    
+    NbTabsetModule,
+    NbRouteTabsetModule,
     DashboardModule,
   ],
   providers: [],
