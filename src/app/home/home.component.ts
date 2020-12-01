@@ -17,22 +17,22 @@ export class HomeComponent implements OnInit {
     {
       title: 'Inicio',
       responsive: true,
-      route: '/home/home.module',
+      route: '',
     },
     {
       title: 'Empresas',
       responsive: true,
-      route: [ '/home/home.module' ],
+      route:  './Empresas' ,
     },
-    {
-      title: 'Empleos',
-      responsive: true,
-      route: [ '/home/home.module' ],
-    },
-    {
-      title: 'Ofertas',
-      responsive: true,
-      route: [ '/home/home.module' ],
-    },
+    // {
+    //   title: 'Empleos',
+    //   responsive: true,
+    //   route: [ '' ],
+    // },
+    // {
+    //   title: 'Ofertas',
+    //   responsive: true,
+    //   route: [ '' ],
+    // },
   ];
 }

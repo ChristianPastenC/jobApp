@@ -8,22 +8,22 @@ import { EmpresaService } from '../services/empresa/empresa.service';
 })
 export class EmpresasComponent implements OnInit {
 
-  public empresas = [];
+  public empresas: any[] = [];
 
   constructor(private firestoreService: EmpresaService) 
   { }
 
   ngOnInit(): void {
     
-    // this.firestoreService.gets().subscribe((Snapshot) => {
-    //   this.empresas = [];
-    //   Snapshot.forEach((Data: any) => {
-    //     this.empresas.push({
-    //       id: Data.payload.doc.id,
-    //       data: Data.payload.doc.data()
-    //     });
-    //   })
-    // });
+    this.firestoreService.gets().subscribe((Snapshot) => {
+       this.empresas = [];
+       Snapshot.forEach((Data: any) => {
+         this.empresas.push({
+           id: Data.payload.doc.id,
+           data: Data.payload.doc.data()
+         });
+       })
+     });
   }
 
 }
