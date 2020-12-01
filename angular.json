@@ -31,7 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@nebular/theme/styles/prebuilt/dark.css" 
+              "node_modules/@nebular/theme/styles/prebuilt/dark.css"
             ],
             "scripts": []
           },
@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "proyectoModelosWeb"
+  "defaultProject": "proyectoModelosWeb",
+  "cli": {
+    "analytics": false
+  }
 }

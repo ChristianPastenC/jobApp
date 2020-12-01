@@ -7,6 +7,8 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import {
   NbThemeModule,
   NbLayoutModule,
@@ -29,6 +31,7 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),
     
