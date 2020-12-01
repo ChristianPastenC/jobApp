@@ -20,6 +20,7 @@ import {
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
+import { EmpresasComponent } from './empresas/empresas.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
     AppComponent,
     HomeComponent,
     VerIndexComponent,
+    EmpresasComponent,
   ],
   imports: [
     BrowserModule,
