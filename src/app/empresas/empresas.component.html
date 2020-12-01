@@ -1,30 +1,16 @@
-<div class="grd">
-    <div class="grd-row">
-      <div class="grd-row-col-2">
-          <h1>🐱 Gatos 🐱</h1>
-          <form>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
-            <label for="url_img">Imagen</label>
-            <input type="url" name="url_img">
-            <input type="submit" class="btn--blue btn--add" value="Agregar">
-          </form>
-      </div>
-      <div class="grd-row-col-4">
-        <div class="cats_container">
-          <div class="media" *ngFor="let empresa of empresas">
-            <div class="media-figure">
-              <img [src]="empresa.data.logo">
-            </div>
-            <div class="media-body">
-              <p>{{empresa.data.nombre}}</p>
-              <div class="btn--group">
-                <button class="btn--green btn--s btn1">Editar</button>
-                <button class="btn--red btn--s btn2">Eliminar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<nb-layout>
+  <nb-layout-header><h5>Empresas</h5></nb-layout-header>
+  <nb-layout-column class="container">
+    <nb-card *ngFor="let empresa of empresas" size="small">
+      <nb-card-header>
+        <p class="h6">{{ empresa.data.nombre }}</p>
+      </nb-card-header>
+      <nb-card-body>
+        <p class="subtitle-2" align='left'>
+          <img src="{{ empresa.data.logo }}" width="100" height="100" />
+            {{ empresa.data.descripcion }}
+          </p>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>
