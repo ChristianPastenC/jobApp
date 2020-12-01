@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import {
   NbThemeModule,
   NbLayoutModule,
@@ -24,8 +28,10 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),
+    
     NbSidebarModule.forRoot(),
     NbLayoutModule,
     NbMenuModule,
