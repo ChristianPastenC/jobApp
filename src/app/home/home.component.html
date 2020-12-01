@@ -2,10 +2,11 @@
     <nb-layout-header fixed>
       <app-header></app-header>
     </nb-layout-header>
-    <nb-sidebar>
-        <app-menu></app-menu>
-    </nb-sidebar>
     <nb-layout-column class="colored-column-basic" id="RouterContent">
-      <router-outlet></router-outlet>
+      <nb-card>
+        <nb-card-body>
+          <nb-route-tabset [tabs]="tabs" fullWidth></nb-route-tabset>
+        </nb-card-body>
+      </nb-card>
   </nb-layout-column>
 </nb-layout>
