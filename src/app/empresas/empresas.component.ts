@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpresaService } from '../services/empresa/empresa.service';
 
 @Component({
   selector: 'app-empresas',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresasComponent implements OnInit {
 
-  constructor() { }
+  public empresas = [];
+
+  constructor(private firestoreService: EmpresaService) 
+  { }
 
   ngOnInit(): void {
+    
+    // this.firestoreService.gets().subscribe((Snapshot) => {
+    //   this.empresas = [];
+    //   Snapshot.forEach((Data: any) => {
+    //     this.empresas.push({
+    //       id: Data.payload.doc.id,
+    //       data: Data.payload.doc.data()
+    //     });
+    //   })
+    // });
   }
 
 }

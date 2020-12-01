@@ -22,7 +22,6 @@ import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
 import { EmpresasComponent } from './empresas/empresas.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
