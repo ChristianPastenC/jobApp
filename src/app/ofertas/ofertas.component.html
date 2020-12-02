@@ -1,31 +1,19 @@
 <nb-layout>
 	<nb-layout-header><h6>Servicios ofertados</h6></nb-layout-header>
-	<nb-layout-column>
-		<nb-flip-card>
-  			<nb-card-front>
-    			<nb-card status="warning" size="tiny">
-     				<nb-card-header>Front Card Header</nb-card-header>
-      				<nb-card-body>
-        				A nebula is an interstellar cloud of dust, hydrogen,
-        				helium and other ionized gases.
-        				Originally, nebula was a name for
-        				any diffuse astronomical object,
-        				including galaxies beyond the Milky Way.
-      				</nb-card-body>
-    			</nb-card>
-  			</nb-card-front>
-  			<nb-card-back>
-    			<nb-card status="info" size="tiny">
-      				<nb-card-header>Back Card Header</nb-card-header>
-      				<nb-card-body>
-       					A nebula is an interstellar cloud of dust, hydrogen,
-        				helium and other ionized gases.
-        				Originally, nebula was a name for
-        				any diffuse astronomical object,
-        				including galaxies beyond the Milky Way.
-      				</nb-card-body>
-    			</nb-card>
-  			</nb-card-back>
-		</nb-flip-card>
+	<nb-layout-column class="container">
+		<nb-card *ngFor="let user of users" size="small" class="ofertas">
+			<nb-card-header>
+				<img src="assets/perfil.png" width="200" height="200" (click)="openDetails(user.id)"/>
+			  </nb-card-header>
+			<nb-card-body>
+			  <p class="h6">{{ user.data.nombre }}</p>
+			  <p class="subtitle-2">
+				{{ user.data.oficio }}, {{ user.data.ubicacion }}, {{ user.data.telefono }}
+			  </p>
+			  <p>
+				{{ user.data.experiencia }}
+			  </p>
+			</nb-card-body>
+		  </nb-card>
 	</nb-layout-column>
 </nb-layout>

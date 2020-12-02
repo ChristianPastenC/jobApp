@@ -18,6 +18,7 @@ import {
   NbSearchModule,
   NbTabsetModule,
   NbRouteTabsetModule,
+  NbDialogModule,
 } from '@nebular/theme';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EmpleosComponent } from './empleos/empleos.component';
 import { OfertasComponent } from './ofertas/ofertas.component';
+import { UserDialogComponent } from './user-dialog/user-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { OfertasComponent } from './ofertas/ofertas.component';
     EmpleosComponent,
     OfertasComponent,
     LoginComponent,
+    UserDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { OfertasComponent } from './ofertas/ofertas.component';
     NbThemeModule.forRoot({name: 'dark'}),
     
     NbSidebarModule.forRoot(),
+    NbDialogModule.forRoot(),
     NbLayoutModule,
     NbMenuModule,
     NbCardModule,

@@ -1,0 +1,19 @@
+<nb-layout>
+	<nb-layout-header><h6>Servicios ofertados</h6></nb-layout-header>
+	<nb-layout-column class="container">
+		<nb-card size="small" class="ofertas">
+			<nb-card-header>
+				<img src="assets/perfil.png" width="200" height="200"/>
+			  </nb-card-header>
+			<nb-card-body>
+			  <p class="h6">{{ userData.data.nombre }}</p>
+			  <p class="subtitle-2">
+				{{ userData.data.oficio }}, {{ userData.data.ubicacion }}, {{ userData.data.telefono }}
+			  </p>
+			  <p>
+				{{ userData.data.experiencia }}
+			  </p>
+			</nb-card-body>
+		  </nb-card>
+	</nb-layout-column>
+</nb-layout>
