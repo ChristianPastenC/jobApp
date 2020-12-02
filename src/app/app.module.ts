@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EmpleosComponent } from './empleos/empleos.component';
+import { OfertasComponent } from './ofertas/ofertas.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EmpleosComponent } from './empleos/empleos.component';
     VerIndexComponent,
     EmpresasComponent,
     LoginComponent,
-    EmpleosComponent
+    EmpleosComponent,
+    OfertasComponent,
   ],
   imports: [
     BrowserModule,
