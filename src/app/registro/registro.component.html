@@ -1,0 +1,176 @@
+<nb-layout>
+  <nb-layout-column class="wrapper">
+    <nb-card class="card">
+        <nb-card-body>
+          <nb-stepper orientation="horizontal">
+            <nb-step [label]="DatosPersonales" [stepControl]="registroForm">
+              <ng-template #DatosPersonales>Datos Personales</ng-template>
+              <h4>Crear nueva cuenta</h4>
+              <form [formGroup]="registroForm">
+                <input
+                  type="text"
+                  formControlName="nombre"
+                  nbInput
+                  fullWidth
+                  placeholder="Nombre"
+                  required
+                  class="campo"
+                />
+      
+                <p
+                  class="caption status-danger"
+                  *ngIf="
+                    registroForm.get('nombre').hasError('required') &&
+                    registroForm.get('nombre').touched
+                  "
+                >
+                  Nombre Requerido
+                </p>
+      
+                <input
+                  type="text"
+                  formControlName="oficio"
+                  nbInput
+                  fullWidth
+                  placeholder="Oficio"
+                  class="campo"
+                />
+      
+                <p
+                  class="caption status-danger"
+                  *ngIf="
+                    registroForm.get('oficio').hasError('required') &&
+                    registroForm.get('oficio').touched
+                  "
+                >
+                  Oficio Requerido
+                </p>
+      
+                <input
+                  type="text"
+                  formControlName="ubicacion"
+                  nbInput
+                  fullWidth
+                  placeholder="Ubicacion actual"
+                  required
+                  class="campo"
+                />
+      
+                <p
+                  class="caption status-danger"
+                  *ngIf="
+                    registroForm.get('ubicacion').hasError('required') &&
+                    registroForm.get('ubicacion').touched
+                  "
+                >
+                  Ubicacion Requerida
+                </p>
+    
+                <input
+                  type="text"
+                  formControlName="experiencia"
+                  nbInput
+                  fullWidth
+                  placeholder="Experiencia"
+                  class="campo"
+                />
+    
+                <input
+                  type="text"
+                  formControlName="telefono"
+                  nbInput
+                  fullWidth
+                  placeholder="Telefono"
+                  required
+                  class="campo"
+                />
+      
+                
+    
+              </form>
+      
+              <button
+                nbButton
+                nbStepperNext
+                [disabled]="registroForm.invalid"
+                (click)="setDatosInfo(registroForm.value)"
+                fullWidth
+              >
+                Siguiente
+              </button>
+            </nb-step>
+      
+            <nb-step [label]="DatosCuenta">
+              <ng-template #DatosCuenta>Cuenta</ng-template>
+              <h4>Datos de la cuenta</h4>
+      
+              <form [formGroup]="cuentaForm">
+                <h6>Cuenta</h6>
+                <br />
+                <input
+                  type="text"
+                  formControlName="correo"
+                  nbInput
+                  fullWidth
+                  placeholder="Correo"
+                  required
+                  class="campo"
+                />
+                <input
+                  formControlName="pass"
+                  nbInput
+                  fullWidth
+                  type="password" 
+                  placeholder="Contraseña"
+                  required
+                  class="campo"
+                />
+      
+                <button nbButton nbStepperPrevious>Anterior</button>
+                <button
+                  nbButton
+                  nbStepperNext
+                  [disabled]="cuentaForm.invalid"
+                  (click)="setCuentaInfo(cuentaForm.value)"
+                >
+                  Siguiente
+                </button>
+              </form>
+            </nb-step>
+    
+            <nb-step [label]="confirmacion">
+              <ng-template #confirmacion>Confirmacion</ng-template>
+              <h4>Información General de Cuenta</h4>
+              <b>Nombre:</b>
+              {{ nuevaCuenta.nombre }} <br />
+              <b>Oficio:</b>
+              {{ nuevaCuenta.oficio }} <br />
+              <b>Experiencia:</b>
+              {{ nuevaCuenta.experiencia }} <br />
+              <b>telefono:</b>
+              {{ nuevaCuenta.telefono }} <br />
+              <b>Correo:</b>
+              {{ nuevaCuenta.correo }} <br />
+              <b>Ubicacion:</b>
+              {{ nuevaCuenta.ubicacion }}
+              <br />
+              
+              <button
+                type="submit"
+                nbButton
+                status="primary"
+                class="btn"
+                fullWidth
+                (click)="registrar()"
+              >
+                Crear Cuenta
+              </button>
+              <br />
+              <button nbButton nbStepperPrevious fullWidth>Anterior</button>
+            </nb-step>
+          </nb-stepper>
+        </nb-card-body>
+      </nb-card>
+  </nb-layout-column>
+</nb-layout>
+

@@ -29,11 +29,7 @@ export class LoginComponent implements OnInit {
       }
     })}
   createUser() {
-    this.afAuth.createUserWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() => {
-      this.router.navigate(['']);
-    }).catch(response => {
-      this.errorMessage = response.message;
-    });
+    this.router.navigate(['/registro']);
   }
   signIn() { 
     this.afAuth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() => {
