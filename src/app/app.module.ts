@@ -16,12 +16,21 @@ import {
   NbCardModule,
   NbSidebarModule,
   NbSearchModule,
+  NbInputModule,
+  NbToastrModule,
+  
+  NbDialogModule,
+  NbStepperModule,
+  NbToggleModule,
+  NbFormFieldModule,
+  NbAutocompleteModule,
 } from '@nebular/theme';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -30,12 +39,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     VerIndexComponent,
     LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
+    NbInputModule,
+    NbToastrModule,
+    NbStepperModule,
+    NbToggleModule,
+    NbDialogModule,
+    NbAutocompleteModule,
+    NbFormFieldModule,
     ReactiveFormsModule,
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),

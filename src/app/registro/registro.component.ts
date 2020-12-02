@@ -67,18 +67,13 @@ export class RegistroComponent implements OnInit {
     .add(JSON.parse(JSON.stringify(this.nuevaCuenta)))
     .then(() => {
       console.log('Usuario Creado');
-      this.showToast('top-right', 'success', 'Usuario Creado', 'Exito');
+      this.createUser();
     })
     .catch(() => {
-      this.showToast(
-        'top-right',
-        'danger',
-        'Error al Crear Cuenta',
-        'Cuenta no Creada'
-      );
+      console.log('Cuenta no rreada')
     });
     // this.cuentaSrv.crearCuenta(this.nuevaCuenta);
-    this.createUser();
+    //this.createUser();
   }
   createUser(){
     this.afAuth.createUserWithEmailAndPassword(this.nuevaCuenta.correo, this.nuevaCuenta.pass).then(() => {
@@ -88,12 +83,6 @@ export class RegistroComponent implements OnInit {
     });
   }
 
-  showToast(position, status, titulo, subTitulo) {
-    this.toastrService.show(subTitulo, titulo, {
-      position,
-      status,
-    });
-  }
   close() {
     //this.dialogRef.close();
   }
