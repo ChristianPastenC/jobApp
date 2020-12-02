@@ -19,6 +19,13 @@ import {
   NbTabsetModule,
   NbRouteTabsetModule,
   NbDialogModule,
+  NbInputModule,
+  NbToastrModule,
+  
+  NbStepperModule,
+  NbToggleModule,
+  NbFormFieldModule,
+  NbAutocompleteModule,
 } from '@nebular/theme';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
@@ -26,6 +33,7 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
 import { EmpresasComponent } from './empresas/empresas.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
 
 import { EmpleosComponent } from './empleos/empleos.component';
 import { OfertasComponent } from './ofertas/ofertas.component';
@@ -42,12 +50,20 @@ import { UserDialogComponent } from './user-dialog/user-dialog.component';
     OfertasComponent,
     LoginComponent,
     UserDialogComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
+    NbInputModule,
+    NbToastrModule,
+    NbStepperModule,
+    NbToggleModule,
+    NbDialogModule,
+    NbAutocompleteModule,
+    NbFormFieldModule,
     ReactiveFormsModule,
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),
