@@ -20,6 +20,8 @@ import {
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,11 +29,14 @@ import { VerIndexComponent } from './ver-index/ver-index.component';
     AppComponent,
     HomeComponent,
     VerIndexComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),
     
