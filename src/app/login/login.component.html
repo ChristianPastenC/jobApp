@@ -1,0 +1,44 @@
+<nb-layout >
+  <nb-layout-column class="wrapper">
+    <nb-card class="card">
+      <form [formGroup]="loginForm">
+        <nb-card-body>
+          <h2>Inicia sesión</h2>
+          <ng-container *ngIf="errorMessage">
+            <span class="error">{{errorMessage}}</span>
+          </ng-container>
+          <div class="input-combo">
+            <label for="title">Email</label>
+            <input  nbInput
+                    required
+                    fullWidth
+                    type="text"
+                    id="email"  
+                    placeholder="E-mail" 
+                    class="form-control" 
+                    formControlName="email" />
+          </div>
+          <div class = "input-combo">
+            <label for="description">Password</label>
+            <input  nbInput
+                    required
+                    fullWidth 
+                    id="password" 
+                    type="password" 
+                    placeholder="Password" 
+                    class="form-control" 
+                    formControlName="password" />
+          </div>
+          <div class = "input-combo">
+            <button nbButton status="primary" (click)="signIn()">
+              Iniciar Sesión
+            </button>
+            <button nbButton status="success" (click)="createUser()">
+              Crear Cuenta
+            </button>
+          </div>
+        </nb-card-body>
+      </form>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>
