@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'Empleos',
       responsive: true,
-      //route: [ '' ],
+      route: './Empleos',
     },
     {
       title: 'Ofertas',

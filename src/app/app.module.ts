@@ -21,6 +21,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
 import { EmpresasComponent } from './empresas/empresas.component';
+import { EmpleosComponent } from './empleos/empleos.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { EmpresasComponent } from './empresas/empresas.component';
     HomeComponent,
     VerIndexComponent,
     EmpresasComponent,
+    EmpleosComponent
   ],
   imports: [
     BrowserModule,
