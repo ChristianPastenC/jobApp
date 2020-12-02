@@ -38,6 +38,7 @@ import { OfertasComponent } from './ofertas/ofertas.component';
     LoginComponent,
     EmpleosComponent,
     OfertasComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
