@@ -4,20 +4,15 @@ import { CommonModule } from '@angular/common';
 import  { 
   NbThemeModule,
   NbLayoutModule,
-  NbIconModule,
-  NbActionsModule,
-  NbUserModule,
-  NbContextMenuModule,
-  NbSelectModule,
   NbMenuModule,
-  NbButtonModule
+  NbButtonModule,
+  NbTabsetModule,
+  NbCardModule,
 } from '@nebular/theme';
 
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
-
-
 
 @NgModule({
   declarations: [HeaderComponent, MenuComponent],
@@ -25,16 +20,12 @@ import { RouterModule } from '@angular/router';
     CommonModule,
 
     NbThemeModule.forRoot(),
-    NbIconModule,
     NbLayoutModule,
-    NbActionsModule,
-    NbUserModule,
-    NbContextMenuModule,
-    NbSelectModule,
     NbMenuModule,
     RouterModule,
     NbButtonModule,
-
+    NbTabsetModule,
+    NbCardModule,
     NbMenuModule.forRoot()
   ],
   exports:[
