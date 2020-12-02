@@ -24,15 +24,15 @@ export class HomeComponent implements OnInit {
       responsive: true,
       route:  './Empresas' ,
     },
-    // {
-    //   title: 'Empleos',
-    //   responsive: true,
-    //   route: [ '' ],
-    // },
-    // {
-    //   title: 'Ofertas',
-    //   responsive: true,
-    //   route: [ '' ],
-    // },
+    {
+      title: 'Empleos',
+      responsive: true,
+      //route: [ '' ],
+    },
+    {
+      title: 'Ofertas',
+      responsive: true,
+      //route: [ '' ],
+    },
   ];
 }
