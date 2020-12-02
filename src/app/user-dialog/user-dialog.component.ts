@@ -10,7 +10,7 @@ import { OfertasService } from '../services/ofertas/ofertas.service'
 export class UserDialogComponent implements OnInit {
 
   usr: string = '';
-  userData: any[] = [];
+  userData: any = [];
   ofertas: any[] = [];
 
   constructor(
@@ -20,10 +20,7 @@ export class UserDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.usrSrv.get(this.usr).subscribe(res => {
-      this.userData.push({
-        id: res.payload.id,
-        data: res.payload.data()
-      });
+      this.userData = res;
     });
     this.ofertaSrv.getServicesOf(this.usr).subscribe((Snapshot) => {
       this.ofertas = [];
