@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EmpleosService } from '../services/empleos.service';
 
 @Component({

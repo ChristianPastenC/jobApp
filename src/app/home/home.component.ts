@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'Ofertas',
       responsive: true,
-      //route: [ '' ],
+      route: './Ofertas',
     },
   ];
 }
