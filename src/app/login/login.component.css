@@ -1,0 +1,67 @@
+.example-container {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex–direction: column;
+    justify–content: center;
+    align–items: center;
+    overflow: hidden;
+   }
+   
+   .example-container > * {
+    width: 25%;
+   }
+   
+   .error {
+    color: red;
+   }
+   
+   .center {
+    text–align: center;
+   }
+   
+   .buttons-container button {
+    margin–left: 5px;
+   }
+
+   .wrapper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .card{
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+  }
+
+  nb-card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  
+  label{
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-combo{
+    width: 100%;
+    max-width: 20rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-combo .caption{
+    text-align: center;
+  }
+  

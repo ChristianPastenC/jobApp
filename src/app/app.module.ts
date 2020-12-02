@@ -7,6 +7,8 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import {
   NbThemeModule,
   NbLayoutModule,
@@ -21,6 +23,9 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 import { VerIndexComponent } from './ver-index/ver-index.component';
 import { EmpresasComponent } from './empresas/empresas.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -28,10 +33,14 @@ import { EmpresasComponent } from './empresas/empresas.component';
     HomeComponent,
     VerIndexComponent,
     EmpresasComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NbThemeModule.forRoot({name: 'dark'}),
     
