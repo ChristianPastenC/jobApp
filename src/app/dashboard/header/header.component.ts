@@ -17,11 +17,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   signIn(){
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 
   logout() {
     this.afAuth.signOut();
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 }

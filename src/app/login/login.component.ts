@@ -24,20 +24,20 @@ export class LoginComponent implements OnInit {
     this.afAuth.user.subscribe( (user) => {
       if (user) {
          this.ngZone.run(() => {
-           this.router.navigate(['/home']);
+           this.router.navigate(['']);
         })
       }
     })}
   createUser() {
     this.afAuth.createUserWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['']);
     }).catch(response => {
       this.errorMessage = response.message;
     });
   }
   signIn() { 
     this.afAuth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() => {
-       this.router.navigate(['/home']);
+       this.router.navigate(['']);
      }).catch(response => {
        this.errorMessage = response.message;
      });
