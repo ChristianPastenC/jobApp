@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users/users.service';
 import { NbDialogService } from '@nebular/theme';
 import { UserDialogComponent } from '../user-dialog/user-dialog.component'; 
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-ofertas',
