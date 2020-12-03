@@ -1,19 +1,50 @@
 <nb-layout>
 	<nb-layout-header><h6>Servicios ofertados</h6></nb-layout-header>
-	<nb-layout-column class="container">
-		<nb-card *ngFor="let user of users" size="small" class="ofertas">
-			<nb-card-header>
-				<img src="assets/perfil.png" width="200" height="200" (click)="openDetails(user.id)"/>
-			  </nb-card-header>
-			<nb-card-body>
-			  <p class="h6">{{ user.data.nombre }}</p>
-			  <p class="subtitle-2">
-				{{ user.data.oficio }}, {{ user.data.ubicacion }}, {{ user.data.telefono }}
-			  </p>
-			  <p>
-				{{ user.data.experiencia }}
-			  </p>
-			</nb-card-body>
-		  </nb-card>
+	<nb-layout-column>
+		<nb-flip-card *ngFor="let user of users">
+  			<nb-card-front>
+    			<nb-card status="info">
+      				<nb-card-header>
+      					<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-hammer" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  						<path d="M9.812 1.952a.5.5 0 0 1-.312.89c-1.671 0-2.852.596-3.616 1.185L4.857 5.073V6.21a.5.5 0 0 1-.146.354L3.425 7.853a.5.5 0 0 1-.708 0L.146 5.274a.5.5 0 0 1 0-.706l1.286-1.29a.5.5 0 0 1 .354-.146H2.84C4.505 1.228 6.216.862 7.557 1.04a5.009 5.009 0 0 1 2.077.782l.178.129z"/>
+  						<path fill-rule="evenodd" d="M6.012 3.5a.5.5 0 0 1 .359.165l9.146 8.646A.5.5 0 0 1 15.5 13L14 14.5a.5.5 0 0 1-.756-.056L4.598 5.297a.5.5 0 0 1 .048-.65l1-1a.5.5 0 0 1 .366-.147z"/>
+						</svg> {{user.data.oficio}}
+      				</nb-card-header>
+      				<nb-card-body>
+      					<p>
+      						<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  								<path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+  								<path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  								<path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+							</svg>  Mi nombre es {{ user.data.nombre }} y soy {{user.data.oficio}}
+      					</p>
+      					<p>
+      						<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  							<path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+							</svg>  {{ user.data.ubicacion }} 
+      					</p>
+      					<p>Mi experiencia: <br><i>"{{ user.data.experiencia }}"</i></p>
+    
+      				</nb-card-body>
+    			</nb-card>
+  			</nb-card-front>
+  			<nb-card-back>
+    			<nb-card status="warning" size="tiny" class="mt-5">
+      				<nb-card-header>Contáctame:</nb-card-header>
+      				<nb-card-body>
+      					<p>
+      						<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-phone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  								<path fill-rule="evenodd" d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+							</svg> {{user.data.telefono}}
+      					</p>
+      					<p>
+      						<svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  								<path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+								</svg> {{ user.data.correo }}
+      					</p>
+      				</nb-card-body>
+    			</nb-card>
+  			</nb-card-back>
+		</nb-flip-card>
 	</nb-layout-column>
 </nb-layout>

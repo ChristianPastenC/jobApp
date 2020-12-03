@@ -1,71 +1,13 @@
-.container {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 30px;
-  justify-content: center;
+nb-flip-card{
+  width: 33%;
+  display: inline-block;
+  padding-left: 50px;
 }
 
-.ofertas {
-  cursor: pointer;
-  max-width: 300px;
-  min-height: 360px;
-  margin: 0px;
-  transition: all 400ms;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
-  }
+nb-card-body p{
+  font-size: 15px;
 }
 
-.ofertas p {
-  margin: 0px;
-}
-
-.ofertas nb-card-header {
-  padding: 0px;
-  border-width: 0px;
-  overflow: hidden;
-  height: 50%;
-}
-
-.ofertas nb-card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.ofertas img {
-  max-width: 100%;
-  min-height: 100%;
-}
-
-nb-layout-column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.card-buttons {
-  width: 100%;
-  align-self: flex-end;
-  flex-grow: 3;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.card-buttons button:nth-child(2) {
-  margin-left: 10px;
-}
-
-.titulo-nvo {
-  position: absolute;
-  top: 10px;
-}
-
-.texto-grande {
-  font-size: 96pt;
+nb-card-header{
+  text-align:center;
 }
