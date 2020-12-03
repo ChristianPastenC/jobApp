@@ -6,7 +6,6 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import {
   AngularFirestore
 } from '@angular/fire/firestore';
-import { NbDialogRef } from '@nebular/theme';
 import { NbToastrService } from '@nebular/theme';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -16,6 +15,7 @@ import { Router } from '@angular/router';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.scss']
 })
+
 export class RegistroComponent implements OnInit {
   errorMessage = '';
   nuevaCuenta: Cuenta;
@@ -27,7 +27,6 @@ export class RegistroComponent implements OnInit {
     private db: AngularFirestore,
     private builder: FormBuilder,
     private afAuth : AngularFireAuth,
-    private toastrService: NbToastrService,
     private router: Router,
  //   protected dialogRef: NbDialogRef<RegistroComponent>,
     ) { 
@@ -61,7 +60,7 @@ export class RegistroComponent implements OnInit {
     this.nuevaCuenta.pass = values.pass;
   }
 
-  enviar(){
+  registrar(){
     this.db
     .collection('users')
     .add(JSON.parse(JSON.stringify(this.nuevaCuenta)))
